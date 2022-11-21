@@ -6,6 +6,7 @@ import { CompletePageComponent } from './pages/complete-page/complete-page.compo
 import { FormPageComponent } from './pages/form-page/form-page.component';
 import { ClientModule } from '../client/client.module';
 import { SavingPlaningModule } from '../planing/saving-planing.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 
 
@@ -19,7 +20,8 @@ import { SavingPlaningModule } from '../planing/saving-planing.module';
     CommonModule,
     SharedModule,
     ClientModule,
-    SavingPlaningModule
+    SavingPlaningModule,
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }

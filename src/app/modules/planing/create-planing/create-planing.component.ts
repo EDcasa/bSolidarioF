@@ -24,7 +24,6 @@ export class CreatePlaningComponent implements OnInit {
   }
 
   changeAmount(eve:any){
-    console.log(eve.target.value);
     this.amountSaving = eve.target.value;
   }
 }

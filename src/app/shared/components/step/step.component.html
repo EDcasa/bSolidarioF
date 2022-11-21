@@ -1,4 +1,4 @@
-<div class="form-steps-container">
+<div class="container form-steps-container">
     <ng-container *ngFor="let step of steps | async; let i = index;">
         <div (click)="onStepClick(step)"
             [ngClass]="{ 'step-complete': step.isComplete, 'step-incomplete': !step.isComplete, 'step-current': (currentStep | async)?.stepIndex === step.stepIndex }"
