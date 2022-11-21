@@ -1,1 +1,25 @@
-<p>create-client works!</p>
+<div class="container">
+    <form (ngSubmit)="registerCLient()" [formGroup]="formClient">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="">Número de identificación</label>
+                <input minlength="10" maxlength="10" formControlName="documentNumber" class="form-control" type="text" placeholder="Ingrese su número de identificación" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md">
+                <label for="">Nombres</label>
+                <input formControlName="firstName" maxlength="100" class="form-control" type="text" placeholder="Ingrese sus nombres" />
+              </div>
+              <div class="form-group col-md">
+                <label for="">Apellidos</label>
+                <input formControlName="lastName" maxlength="100" class="form-control" type="text" placeholder="Ingrese sus apellidos" />
+              </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="form-action">
+                <button [disabled]="formClient.invalid" class="btn btn-primary btn-lg"> Guardar </button>
+            </div>
+        </div>
+    </form>
+</div>

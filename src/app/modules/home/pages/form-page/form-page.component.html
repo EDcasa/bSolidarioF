@@ -4,10 +4,13 @@
     <div class="form-step">
         <ng-container [ngSwitch]="currentStep?.stepIndex">
             <ng-container *ngSwitchCase="'1'">
-                <app-step-template [step]="currentStep"></app-step-template>
+                <!-- <app-step-template [step]="currentStep"></app-step-template> -->
+                <app-create-planing [step]="currentStep"></app-create-planing>
+                <!-- <app-create-client [step]="currentStep"></app-create-client> -->
             </ng-container>
             <ng-container *ngSwitchCase="'2'">
-              <app-step-template [step]="currentStep"></app-step-template>
+              <!-- <app-step-template [step]="currentStep"></app-step-template> -->
+              <app-create-planing [step]="currentStep"></app-create-planing>
             </ng-container>
             <ng-container *ngSwitchCase="'3'">
               <app-step-template [step]="currentStep"></app-step-template>

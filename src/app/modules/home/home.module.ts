@@ -4,6 +4,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { CompletePageComponent } from './pages/complete-page/complete-page.component';
 import { FormPageComponent } from './pages/form-page/form-page.component';
+import { ClientModule } from '../client/client.module';
+import { SavingPlaningModule } from '../planing/saving-planing.module';
 
 
 
@@ -15,7 +17,9 @@ import { FormPageComponent } from './pages/form-page/form-page.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ClientModule,
+    SavingPlaningModule
   ]
 })
 export class HomeModule { }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CreatePlaningComponent } from './create-planing/create-planing.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,11 @@ import { CreatePlaningComponent } from './create-planing/create-planing.componen
     CreatePlaningComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
+  ],
+  exports:[
+    CreatePlaningComponent
   ]
 })
 export class SavingPlaningModule { }

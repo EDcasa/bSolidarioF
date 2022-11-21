@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { StepModel } from 'src/app/interfaces/step.model';
 
 @Component({
   selector: 'app-create-planing',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatePlaningComponent implements OnInit {
 
+  formPlaning: FormGroup = new FormGroup({}); 
+  @Input() step: StepModel = {} as StepModel;
+  
+  amountSaving:number = 100;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  registerPlaning(){
+    this.step.isComplete = true;
+  }
+
+  changeAmount(eve:any){
+    console.log(eve.target.value);
+    this.amountSaving = eve.target.value;
+  }
 }
