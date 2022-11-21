@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 import { StepModel } from 'src/app/interfaces/step.model';
-import { StepsService } from '../../service/steps.service';
+import { StepsService } from 'src/app/shared/service/steps.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-form-page',
+  templateUrl: './form-page.component.html',
+  styleUrls: ['./form-page.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class FooterComponent implements OnInit {
-
-  currentStep?: StepModel;
+export class FormPageComponent implements OnInit {
+  currentStep: StepModel ={} as StepModel;
   currentStepSub: Subscription = new Subscription();
 
   constructor(

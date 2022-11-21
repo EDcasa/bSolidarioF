@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { StepModel } from 'src/app/interfaces/step.model';
-import { StepsService } from 'src/app/shared/service/steps.service';
+import { StepsService } from '../../service/steps.service';
 
 @Component({
-  selector: 'app-steps',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-step',
+  templateUrl: './step.component.html',
+  styleUrls: ['./step.component.css']
 })
-export class HomeComponent implements OnInit {
+export class StepComponent implements OnInit {
 
-  
-  steps?: Observable<StepModel[]>;
+  steps: Observable<StepModel[]> = new Observable();
   currentStep?: Observable<StepModel>;
 
   constructor(private stepsService: StepsService) { }

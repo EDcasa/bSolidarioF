@@ -1,4 +1,3 @@
-
 .form-page-container {
     display: flex;
     flex-direction: column;
@@ -14,12 +13,14 @@
 .form-continue-btn {
     background: blue;
     margin: 32px;
+
 }
+
+
 .form-continue-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed !important;
 }
-
 .common-btn {
     color: white;
     background: blue;
